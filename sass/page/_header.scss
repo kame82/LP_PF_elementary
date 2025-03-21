@@ -1,0 +1,156 @@
+@use "../setting/color" as *;
+@use "../mixin/mixin" as *;
+.button {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px 6px 30px;
+  width: 160px;
+  margin: 0 auto;
+
+  @include mq(pc) {
+    transition: background 0.3s, color 0.3s, opacity 0.3s;
+    &:hover {
+      background-color: $white;
+      .button__text {
+        color: $bg-dark;
+      }
+      .button__icon-path {
+        fill: $bg-dark;
+      }
+    }
+  }
+
+  &--bg {
+    background-color: $white;
+    @include mq(pc) {
+      color: $bg-dark;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    .button__text {
+      color: $bg-dark;
+    }
+  }
+
+  &--border {
+    border: solid 1px $white;
+  }
+
+  &__icon {
+    width: 24px;
+    align-items: center;
+    display: flex;
+  }
+
+  &__text {
+    margin-left: 10px;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+  }
+
+  &__icon-path {
+    fill: $white;
+
+    &--contact {
+      fill: $bg-dark;
+    }
+  }
+  &__text {
+    color: $white;
+  }
+}
+
+// header
+
+@include mq(pc) {
+  .wrapper {
+    display: flex;
+  }
+}
+
+.header {
+  background-color: $bg-l-blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  @include mq(pc) {
+    background: linear-gradient($bg-l-blue, $bg-blue);
+    position: relative;
+    flex-basis: 20.8%;
+    padding: 50px 20px;
+  }
+
+  &__nav-item {
+    & + & {
+      margin-top: 24px;
+    }
+  }
+  &__container {
+    position: relative;
+    width: 100%;
+
+    @include mq(pc) {
+      width: 160px;
+      margin: 0 auto;
+      position: sticky;
+      top: 50px;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    padding: 14px 24px;
+    font-size: 20px;
+    color: $white;
+    font-family: cursive;
+
+    @include mq(pc) {
+      font-size: 30px;
+      letter-spacing: 0.12em;
+      padding: 0px;
+    }
+    @include mq(tb) {
+      font-size: 26px;
+      letter-spacing: normal;
+      padding: 14px 24px;
+    }
+  }
+  &__menu-button {
+    border: none;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 30px;
+    height: 36px;
+    color: transparent;
+    background: url(../img/bg_menu.png) center center no-repeat;
+    background-size: 100%;
+
+    @include mq(pc) {
+      display: none;
+    }
+
+    &.is-checked {
+      background: url(../img/bg_menu-close.png) center center no-repeat;
+      background-size: 100% auto;
+    }
+  }
+  &__contents {
+    background: linear-gradient($bg-l-blue, $bg-blue);
+    height: calc(100vh - 88px);
+    border-top: solid 1px $white;
+    padding-top: 60px;
+    display: none;
+
+    @include mq(pc) {
+      display: block;
+      border: none;
+      background: none;
+    }
+  }
+}

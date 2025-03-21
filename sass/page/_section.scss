@@ -1,0 +1,278 @@
+@use "../setting/color" as *;
+@use "../mixin/mixin" as *;
+.main {
+  @include mq(pc) {
+    flex-basis: 78.8%;
+  }
+}
+
+// fv
+.fv {
+  position: relative;
+
+  &__contents {
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    width: 100%;
+    height: 209px;
+    background: url(../img/sp/bg_fv.png) center center no-repeat;
+    background-size: 100% auto;
+    padding: 32px;
+
+    @include mq(pc) {
+      background: url(../img/bg_fv.png) center center no-repeat;
+      background-size: 100% auto;
+      left: 0;
+      bottom: 100px;
+      max-width: 627px;
+      height: 174px;
+      padding-top: 24px;
+      padding-left: 96px;
+    }
+
+    @include mq(tb) {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+  }
+
+  &__heading {
+    line-height: 110px;
+  }
+
+  &__heading-main {
+    display: block;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    font-family: sans-serif;
+  }
+}
+// section
+.section {
+  padding: 48px 0;
+  &__inner {
+    padding: 0 32px;
+
+    @include mq(pc) {
+      max-width: calc(880px + 32px * 2);
+      margin: 0 auto;
+    }
+  }
+  &__head {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+
+    &--center {
+      text-align: center;
+    }
+
+    @include mq(pc) {
+      margin-bottom: 24px;
+    }
+  }
+  &__head-main {
+    font-size: 40px;
+    letter-spacing: 0.1em;
+
+    @include mq(pc) {
+      font-size: 60px;
+    }
+
+    @include mq(tb) {
+      font-size: 54px;
+    }
+
+    &--bottom {
+      @include mq(tb) {
+        font-size: 40px;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+  &__sub-main {
+    font-size: 11px;
+  }
+
+  &__lead-text {
+    font-size: 16px;
+    line-height: 1.2em;
+  }
+  &__contents {
+    margin-top: 40px;
+  }
+}
+// service
+
+.service {
+  &__list {
+    @include mq(pc) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8%;
+    }
+  }
+  &__item {
+    & + & {
+      margin-top: 40px;
+
+      @include mq(pc) {
+        margin: 0;
+      }
+    }
+  }
+  &__item-img {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  &__item-name {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__item-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+// works
+.works {
+  background-color: $bg-light;
+  &__list {
+    @include mq(pc) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8%;
+    }
+  }
+  &__item {
+    & + & {
+      margin-top: 40px;
+
+      @include mq(pc) {
+        margin: 0;
+      }
+    }
+  }
+  &__item-img {
+    box-shadow: 0 4px 15px 0 rgba($black, 0.15);
+    margin-bottom: 12px;
+  }
+  &__item-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  &__item-link {
+    text-decoration: underline;
+    font-size: 14px;
+  }
+}
+// about
+.about {
+  &__container {
+    @include mq(pc) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+  }
+  &__img {
+    margin-bottom: 32px;
+    img {
+      box-shadow: 0 4px 15px 0 rgba($black, 0.15);
+      width: 200mm;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    & + & {
+      margin-top: 1em;
+    }
+  }
+}
+
+//flow
+.flow {
+  background-color: $bg-light;
+  &__list {
+    margin-top: 64px;
+    @include mq(pc) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    @include mq(tb) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 16px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    border: solid 1px $cl-border;
+    padding: 46px 16px 24px;
+    & + & {
+      margin-top: 46px;
+
+      @include mq(pc) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__item-num {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background-color: $bg-dark;
+    color: $white;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item-img {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  &__item-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__item-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+//message
+.message {
+  &__container {
+    @include mq(pc) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+  &__img {
+    margin-bottom: 32px;
+    text-align: center;
+    img {
+      width: 500px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
