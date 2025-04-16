@@ -1,0 +1,23 @@
+{
+  "name": "lp_pf_elementary",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/kame82/LP_PF_elementary#readme",
+  "bugs": {
+    "url": "https://github.com/kame82/LP_PF_elementary/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kame82/LP_PF_elementary.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
