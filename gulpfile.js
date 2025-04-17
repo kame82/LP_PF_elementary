@@ -22,9 +22,9 @@ const imageminMozjpeg = require("imagemin-mozjpeg");
 const imageminSvgo = require("imagemin-svgo");
 
 // 入出力するフォルダを指定
-const baseRoot = "./public_html";
+const baseRoot = "./docs"; //github pagesでdocsをルートに設定したいためpublic_htmlをdocsに変更
 const srcBase = "./src";
-const distBase = "./public_html/assets";
+const distBase = "./docs/assets"; //github pagesでdocsをルートに設定したいためpublic_htmlをdocsに変更
 
 const srcPath = {
   scss: srcBase + "/scss/**/*.scss",
@@ -180,9 +180,9 @@ const browserSyncOption = {
   // notify: false,// ブラウザ更新時に出てくる通知を非表示にする
   // open: "external",// ローカルIPアドレスでサーバを立ち上げる
 
-  /**静的サイトは有効 / WPは無効にする**/
+  /**静的サイト は有効 / WPは無効にする**/
   server: {
-    baseDir: "./public_html",
+    baseDir: "./docs", //github pagesでdocsをルートに設定したいためpublic_htmlをdocsに変更
     index: ["index.html"],
   },
 
