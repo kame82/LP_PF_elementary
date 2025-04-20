@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //マップ型変数breakpointsを定義
 $breakpoints: (
   //キー値
@@ -11,7 +13,7 @@ $breakpoints: (
 //メディアクエリ用のmixinを定義。デフォ値はsp
 @mixin mq($breakpoint: sp) {
   //map-get(マップ型変数, キー)で値を取得
-  @media #{map-get($breakpoints, $breakpoint)} {
+  @media #{map.get($breakpoints, $breakpoint)} {
     //この中をカスタムできる
     @content;
   }
