@@ -22,9 +22,6 @@
 // FVアニメーション
 // ============================
 document.querySelector("body").style.overflow = "hidden";
-gsap.set(".opening-view", {
-  display: "block",
-});
 
 const tl = gsap.timeline();
 tl.to(".opening-view", {
