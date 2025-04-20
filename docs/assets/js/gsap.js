@@ -21,11 +21,9 @@
 // ============================
 // FVアニメーション
 // ============================
+document.querySelector("body").style.overflow = "hidden";
 gsap.set(".opening-view", {
   display: "block",
-  onComplete: () => {
-    document.querySelector("body").style.overflow = "hidden";
-  },
 });
 
 const tl = gsap.timeline();
