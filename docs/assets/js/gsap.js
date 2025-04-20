@@ -21,16 +21,21 @@
 // ============================
 // FVアニメーション
 // ============================
-gsap.set(".opening-view", { display: "block" }).then(() => {
-  document.querySelector("body").style.overflow = "hidden";
+gsap.set(".opening-view", {
+  display: "block",
+  onComplete: () => {
+    document.querySelector("body").style.overflow = "hidden";
+  },
 });
-// gsap.set(".opening-view__back1", { });
-// gsap.set(".fv", { position: "fixed", top: 0, left: 0, right: 0, bottom: 0, "z-index": 999, width: "100vw", height: "100vh" });
 
 const tl = gsap.timeline();
-tl.to(".opening-view", { opacity: 0, duration: 1, delay: 2 }).then(() => {
-  document.querySelector(".opening-view").style.display = "none";
-  document.querySelector("body").style.overflow = "auto";
+tl.to(".opening-view", {
+  opacity: 0,
+  duration: 1,
+  delay: 2,
+  onComplete: () => {
+    document.querySelector(".opening-view").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
+  },
 });
-
 // tl.to(".opening-view__back1", { width: "100vw", duration: 1, delay: 1 });
