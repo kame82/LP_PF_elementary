@@ -1,0 +1,33 @@
+@use "../mixin/mixin" as *;
+
+.opening-view {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00ced1, #4169e1);
+  z-index: 9999;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.opening-view__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-family: cursive;
+  @include mq(pc) {
+    font-size: 60px;
+  }
+}
