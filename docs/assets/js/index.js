@@ -8,7 +8,7 @@ $("#js-button-drawer").on("click", function () {
 //上部に戻るボタンの設置
 jQuery(function () {
   //コマンドボタンを隠す
-  var topBtn = jQuery("#js-return-top");
+  var topBtn = jQuery("#js-return-top-wrap");
   topBtn.hide();
 
   //スクロールが規定値に到達でボタン表示
@@ -23,6 +23,22 @@ jQuery(function () {
   topBtn.click(function () {
     jQuery("body,html").animate({ scrollTop: 0 }, 500);
     return false;
+  });
+});
+
+// ============================
+// スクロールアニメーション
+// ============================
+document.querySelectorAll("nav a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href").substring(1); // Remove the '#' from the href
+    const targetElement = document.getElementById(targetId);
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
+    });
   });
 });
 

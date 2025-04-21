@@ -34,7 +34,7 @@
             <nav class="header__nav">
               <ul class="header__nav-list-list">
                 <li class="header__nav-item">
-                  <a href="#service" class="header__nav-link button">
+                  <a href="#service" class="header__nav-link button" id="header__nav-service">
                     <span class="button__icon">
                       <svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -60,7 +60,7 @@
                   </a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#about" class="header__nav-link button">
+                  <a href="#about" class="header__nav-link button" id="header__nav-about">
                     <span class="button__icon">
                       <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -73,7 +73,7 @@
                   </a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#flow" class="header__nav-link button">
+                  <a href="#flow" class="header__nav-link button" id="header__nav-workflow">
                     <span class="button__icon">
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -90,7 +90,7 @@
                   </a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#message" class="header__nav-link button">
+                  <a href="#message" class="header__nav-link button" id="header__nav-message">
                     <span class="button__icon">
                       <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -306,7 +306,7 @@
             </h2>
             <a href="mailto:kamewowowo@gmail.com" target="_blank" class="page-bottom__button button button--border">
               <span class="button__icon">
-                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="sone" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M2.5 2.28406C2.15625 2.28406 1.875 2.56339 1.875 2.90479V3.76217L8.61328 9.25563C9.42188 9.91515 10.582 9.91515 11.3906 9.25563L18.125 3.76217V2.90479C18.125 2.56339 17.8438 2.28406 17.5 2.28406H2.5ZM1.875 6.17138V12.8365C1.875 13.1779 2.15625 13.4572 2.5 13.4572H17.5C17.8438 13.4572 18.125 13.1779 18.125 12.8365V6.17138L12.5781 10.6949C11.0781 11.917 8.91797 11.917 7.42188 10.6949L1.875 6.17138ZM0 2.90479C0 1.53531 1.12109 0.421875 2.5 0.421875H17.5C18.8789 0.421875 20 1.53531 20 2.90479V12.8365C20 14.2059 18.8789 15.3194 17.5 15.3194H2.5C1.12109 15.3194 0 14.2059 0 12.8365V2.90479Z"
                     class="button__icon-path"
@@ -334,9 +334,9 @@
           </div>
         </div>
         <!-- TOPに戻るボタン -->
-        <div class="return-wrap">
-          <p class="return-top" id="js-return-top">
-            <a href="#" class="return-top-text">TOP</a>
+        <div class="return-wrap" id="js-return-top-wrap">
+          <p class="return-top">
+            <a href="#" class="return-top-text" id="js-return-top">TOP</a>
           </p>
         </div>
         <!-- footer -->
@@ -355,7 +355,7 @@
     </div>
 
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.12.7/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="./assets/js/gsap.js"></script>
