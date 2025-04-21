@@ -27,7 +27,7 @@ const tl = gsap.timeline();
 tl.to(".opening-view", {
   opacity: 0,
   duration: 1,
-  delay: 2,
+  delay: 1,
   onComplete: () => {
     document.querySelector(".opening-view").style.display = "none";
     document.querySelector("body").style.overflow = "auto";
