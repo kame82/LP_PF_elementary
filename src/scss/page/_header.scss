@@ -153,4 +153,9 @@
       background: none;
     }
   }
+
+  .is-active {
+    color: red;
+    background: $bg-l-blue;
+  }
 }

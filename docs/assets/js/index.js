@@ -42,6 +42,27 @@ document.querySelectorAll("nav a").forEach((link) => {
   });
 });
 
+// ============================
+// 追従navigation
+// ============================
+window.addEventListener("scroll", function () {
+  let lastScrollY = window.scrollY;
+  const navLinks = document.querySelectorAll(".header__nav-item a");
+  navLinks.forEach((link) => {
+    link.classList.remove("is-active");
+    const sectionId = link.getAttribute("href").substring(1);
+    const sectionElement = document.getElementById(sectionId);
+
+    if (sectionElement) {
+      const sectionTop = sectionElement.offsetTop; // Adjust for fixed header height
+      const sectionBottom = sectionTop + sectionElement.offsetHeight;
+      if (lastScrollY >= sectionTop && lastScrollY < sectionBottom) {
+        link.classList.add("is-active");
+      }
+    }
+  });
+});
+
 /** バニラJS
  * // ハンバーガーボタンとドロワー
 document.getElementById("js-button-drawer").addEventListener("click", function () {
