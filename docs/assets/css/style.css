@@ -188,6 +188,10 @@ body .is-fixed {
   display: none;
 }
 
+.header .is-active {
+  background: #00ced1;
+}
+
 .fv {
   position: relative;
 }

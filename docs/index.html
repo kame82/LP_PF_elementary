@@ -34,7 +34,7 @@
             <nav class="header__nav">
               <ul class="header__nav-list-list">
                 <li class="header__nav-item">
-                  <a href="#service" class="header__nav-link button">
+                  <a href="#service" class="header__nav-link button" id="header__nav-service">
                     <span class="button__icon">
                       <svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -60,7 +60,7 @@
                   </a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#about" class="header__nav-link button">
+                  <a href="#about" class="header__nav-link button" id="header__nav-about">
                     <span class="button__icon">
                       <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -73,7 +73,7 @@
                   </a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#flow" class="header__nav-link button">
+                  <a href="#flow" class="header__nav-link button" id="header__nav-workflow">
                     <span class="button__icon">
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -90,7 +90,7 @@
                   </a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#message" class="header__nav-link button">
+                  <a href="#message" class="header__nav-link button" id="header__nav-message">
                     <span class="button__icon">
                       <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -334,9 +334,9 @@
           </div>
         </div>
         <!-- TOPに戻るボタン -->
-        <div class="return-wrap">
-          <p class="return-top" id="js-return-top">
-            <a href="#" class="return-top-text">TOP</a>
+        <div class="return-wrap" id="js-return-top-wrap">
+          <p class="return-top">
+            <a href="#" class="return-top-text" id="js-return-top">TOP</a>
           </p>
         </div>
         <!-- footer -->
@@ -355,7 +355,7 @@
     </div>
 
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.12.7/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="./assets/js/gsap.js"></script>
