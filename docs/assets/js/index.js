@@ -8,7 +8,7 @@ $("#js-button-drawer").on("click", function () {
 //上部に戻るボタンの設置
 jQuery(function () {
   //コマンドボタンを隠す
-  var topBtn = jQuery("#js-return-top-wrap");
+  const topBtn = jQuery("#js-return-top-wrap");
   topBtn.hide();
 
   //スクロールが規定値に到達でボタン表示
