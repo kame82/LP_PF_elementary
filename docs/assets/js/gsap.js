@@ -1,4 +1,4 @@
-var windowWidth = window.width;
+var windowWidth = window.innerWidth;
 var windowSmall = window.matchMedia("(max-width: 768px)");
 
 if (windowSmall.matches) {
