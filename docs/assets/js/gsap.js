@@ -26,8 +26,8 @@ document.querySelector("body").style.overflow = "hidden";
 const tl = gsap.timeline();
 tl.to(".opening-view", {
   opacity: 0,
-  duration: 1,
-  delay: 1,
+  duration: 0.7,
+  delay: 0.5,
   onComplete: () => {
     document.querySelector(".opening-view").style.display = "none";
     document.querySelector("body").style.overflow = "auto";
