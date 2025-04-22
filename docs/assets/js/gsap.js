@@ -63,18 +63,18 @@ if (windowSmall.matches) {
   // ============================
   // smooth-scroll
   // ============================
-  const container = document.querySelector("#smooth-content");
-  const height = container.clientHeight; //コンテンツの高さを取得
-  document.body.style.height = `${height}px`; //bodyタグにスタイル付与
+//   const container = document.querySelector("#smooth-content");
+//   const height = container.clientHeight; //コンテンツの高さを取得
+//   document.body.style.height = `${height}px`; //bodyタグにスタイル付与
 
-  gsap.to(container, {
-    y: -(height - document.documentElement.clientHeight), //ページ内要素の高さ - ウインドウの高さ
-    ease: "none",
-    scrollTrigger: {
-      trigger: document.body,
-      start: "top top",
-      end: "bottom bottom",
-      scrub: 1,
-    },
-  });
-}
+//   gsap.to(container, {
+//     y: -(height - document.documentElement.clientHeight), //ページ内要素の高さ - ウインドウの高さ
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: document.body,
+//       start: "top top",
+//       end: "bottom bottom",
+//       scrub: 1,
+//     },
+//   });
+// }
