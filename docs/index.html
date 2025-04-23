@@ -21,7 +21,7 @@
   <body>
     <div class="opening-view">
       <div class="opening-view__back1">
-        <div class="opening-view__logo">Tsukamo's<br />Portfolio</div>
+        <h1 class="opening-view__logo">Tsukamo's<br />Portfolio</h1>
       </div>
     </div>
     <div id="smooth-wrapper">
@@ -139,13 +139,16 @@
             <!-- first view -->
             <div class="fv">
               <picture class="fv__image">
-                <source media="(min-width: 768px)" srcset="./assets/img/img_fv.png" />
+                <source media="(min-width: 768px)" srcset="./assets/img/img_fv2.png" />
                 <img src="./assets/img/sp/img_fv.png" alt="" />
               </picture>
+              <div class="fv__image_content">
+                <div class="fv__image_content-text"><!--TypeItによるJS入力--></div>
+              </div>
               <div class="fv__contents">
-                <h1 class="fv__heading">
-                  <span class="fv__heading-main">想いを形に。</span>
-                </h1>
+                <h2 class="fv__heading">
+                  <span class="fv__heading-main">現役エンジニアが提供する<br />Web制作サービス</span>
+                </h2>
               </div>
             </div>
             <!-- section_service -->
@@ -359,6 +362,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
     <script src="./assets/js/gsap.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
