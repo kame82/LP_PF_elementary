@@ -1,0 +1,11 @@
+@function rem($arg) {
+  @return calc(#{unitLess($arg)} / 16 * 1rem);
+}
+
+@function unitLess($value) {
+  @if type-of($value) == "number" and unit($value) == "px" {
+    @return $value / 1px; // px単位を削除して数値のみ返す
+  } @else {
+    @return $value; // px単位以外はそのまま返す
+  }
+}

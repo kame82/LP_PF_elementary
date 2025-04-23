@@ -1,5 +1,7 @@
 @use "../setting/color" as *;
 @use "../mixin/mixin" as *;
+@use "../mixin/function" as *;
+
 .main {
   @include mq(pc) {
     flex-basis: 78.8%;
@@ -48,6 +50,22 @@
     font-family: sans-serif;
   }
 }
+
+.fv__image_content {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 50%;
+  aspect-ratio: 1.5;
+  background: url(../img/img_fv2_pc.png) center center no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.fv__image_content-text {
+  font-size: rem(40px);
+}
+
 // section
 .section {
   padding: 48px 0;
