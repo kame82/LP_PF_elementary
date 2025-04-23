@@ -86,11 +86,16 @@ const typAnime = new TypeIt(".fv__image_content-text", {
   )
   .pause(1000)
   .move(-6)
+  .pause(300)
   .type("<br>")
-  .pause(1000)
+  .pause(300)
   .move(-1)
+  .pause(1000)
+  .type("<br>")
+  .pause(300)
+  .type("&nbsp;&nbsp;&nbsp;&nbsp;")
   .type(
-    '<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-gray">&lt;</span><span class="font-blue">h1</span><span class="font-gray">&gt;</span><span class="font-white">Welcome!!</span><span class="font-gray">&lt;</span><span class="font-blue">/h1</span><span class="font-gray">&gt;</span>'
+    '<span class="font-gray">&lt;</span><span class="font-blue">h1</span><span class="font-gray">&gt;</span><span class="font-white">Welcome!!</span><span class="font-gray">&lt;</span><span class="font-blue">/h1</span><span class="font-gray">&gt;</span>'
   )
   .pause(1000)
   .move(-5)
@@ -98,7 +103,7 @@ const typAnime = new TypeIt(".fv__image_content-text", {
   .type('<span class="font-white">Hello&nbsp;World!!</span>')
   .pause(1000)
   .move(12)
-  .pause(1000)
+  .pause(10000)
   .delete()
   .go();
 

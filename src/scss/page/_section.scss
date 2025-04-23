@@ -18,13 +18,14 @@
 .font-white {
   color: $white;
 }
+
 // fv
 .fv {
   position: relative;
 
   &__contents {
     position: absolute;
-    bottom: 26px;
+    bottom: 15%;
     left: 0;
     width: fit-content;
     // height: 209px;
@@ -62,15 +63,42 @@
   }
 }
 
+.fv__image {
+  @include mq(sp) {
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+  @include mq(pc) {
+    img {
+      width: auto;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
 .fv__image_content {
   position: absolute;
-  bottom: 10%;
-  right: 5%;
-  width: 50%;
+  width: 80%;
   aspect-ratio: 1.5;
   background: url(../img/img_fv2_pc.png) center center no-repeat;
   background-size: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 0;
+
+  @include mq(pc) {
+    top: auto;
+    left: auto;
+    transform: none;
+    bottom: 10%;
+    right: 5%;
+    width: 50%;
+  }
 }
 
 .fv__image_content-text {
@@ -80,6 +108,16 @@
   font-size: clamp(rem(16px), 0.556rem + 2.22vw, rem(40px));
   color: white;
   white-space: nowrap;
+}
+
+// typewriter cursor
+:root {
+  --ti-cursor-color: #3bf053;
+  --ti-cursor-font-size: 20px;
+
+  @include mq(pc) {
+    --ti-cursor-font-size: 40px;
+  }
 }
 
 // section
@@ -175,6 +213,10 @@
 .works {
   background-color: $bg-light;
   &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     @include mq(pc) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
