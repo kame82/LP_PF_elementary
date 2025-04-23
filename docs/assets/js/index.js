@@ -63,6 +63,50 @@ window.addEventListener("scroll", function () {
   });
 });
 
+// ============================
+// FV typewriter animation
+// ============================
+
+// new TypeIt(".fv__image_content-text_1", {
+//   strings: "aaaaaaaaaaaaaaaa",
+//   //
+//   // <p class="fv__image_content-text_2"></p>
+//   // <p class="fv__image_content-text_3"></p>
+// }).go();
+
+const typAnime = new TypeIt(".fv__image_content-text", {
+  speed: 50,
+  loop: true,
+  loopDelay: 1000,
+  delay: 1000,
+})
+  .type(
+    '<span class="font-gray">&lt;</span><span class="font-blue">div</span><span class="font-gray">&gt;</span><span class="font-gray">&lt;</span><span class="font-blue">/div</span><span class="font-gray">&gt;</span>',
+    { delay: 1000 }
+  )
+  .pause(1000)
+  .move(-6)
+  .pause(300)
+  .type("<br>")
+  .pause(300)
+  .move(-1)
+  .pause(1000)
+  .type("<br>")
+  .pause(300)
+  .type("&nbsp;&nbsp;&nbsp;&nbsp;")
+  .type(
+    '<span class="font-gray">&lt;</span><span class="font-blue">h1</span><span class="font-gray">&gt;</span><span class="font-white">Welcome!!</span><span class="font-gray">&lt;</span><span class="font-blue">/h1</span><span class="font-gray">&gt;</span>'
+  )
+  .pause(1000)
+  .move(-5)
+  .delete(9)
+  .type('<span class="font-white">Hello&nbsp;World!!</span>')
+  .pause(1000)
+  .move(12)
+  .pause(10000)
+  .delete()
+  .go();
+
 /** バニラJS
  * // ハンバーガーボタンとドロワー
 document.getElementById("js-button-drawer").addEventListener("click", function () {
