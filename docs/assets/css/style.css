@@ -80,7 +80,7 @@ body {
   color: #333;
 }
 
-body .is-fixed {
+.is-fixed {
   overflow: hidden;
 }
 
@@ -263,11 +263,11 @@ body .is-fixed {
 }
 
 .section {
-  padding: 48px 0;
+  padding: 48px 0 90px 0;
 }
 
 .section__inner {
-  padding: 0 32px;
+  padding: 0 40px;
 }
 
 .section__head {
@@ -657,7 +657,7 @@ body .is-fixed {
   }
 
   .section__head {
-    margin-bottom: 24px;
+    margin-bottom: 50px;
   }
 
   .section__head-main {
