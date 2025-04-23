@@ -35,10 +35,24 @@ document.querySelectorAll("nav a").forEach((link) => {
 
     const targetId = this.getAttribute("href").substring(1); // Remove the '#' from the href
     const targetElement = document.getElementById(targetId);
-    window.scrollTo({
-      top: targetElement.offsetTop,
-      behavior: "smooth",
-    });
+
+    if ($("#js-button-drawer").hasClass("is-checked")) {
+      $("#js-button-drawer").removeClass("is-checked");
+      $("#js-drawer").slideUp();
+      $("body").removeClass("is-fixed");
+    }
+
+    if (window.innerWidth < 768) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 84, // Adjust for fixed header height
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
   });
 });
 

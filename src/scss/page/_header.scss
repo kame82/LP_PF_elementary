@@ -62,6 +62,19 @@
   }
 }
 
+#js-drawer-reverse {
+  display: none;
+  @include mq(pc) {
+    display: block;
+    margin-top: 100px;
+    button {
+      background-color: transparent;
+      cursor: pointer;
+      appearance: none;
+      font-family: inherit;
+    }
+  }
+}
 // header
 
 @include mq(pc) {

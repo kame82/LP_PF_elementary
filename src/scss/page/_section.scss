@@ -4,7 +4,7 @@
 
 .main {
   @include mq(pc) {
-    flex-basis: 78.8%;
+    flex-basis: 79.2%;
   }
 }
 
@@ -72,10 +72,21 @@
     }
   }
   @include mq(pc) {
+    width: 100%;
+    height: 100vh;
     img {
-      width: auto;
-      height: auto;
+      width: 100%;
+      height: 100vh;
       object-fit: cover;
+      object-position: left center;
+    }
+  }
+  @include mq(tb) {
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: 8% center;
     }
   }
 }
@@ -122,9 +133,9 @@
 
 // section
 .section {
-  padding: 48px 0;
+  padding: 48px 0 110px 0;
   &__inner {
-    padding: 0 32px;
+    padding: 0 40px;
 
     @include mq(pc) {
       max-width: calc(880px + 32px * 2);
@@ -141,7 +152,7 @@
     }
 
     @include mq(pc) {
-      margin-bottom: 24px;
+      margin-bottom: 100px;
     }
   }
   &__head-main {
@@ -164,7 +175,7 @@
     }
   }
   &__sub-main {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   &__lead-text {
@@ -172,7 +183,7 @@
     line-height: 1.2em;
   }
   &__contents {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 }
 // service
@@ -387,19 +398,3 @@
   align-items: center;
   background-color: $bg-light;
 }
-
-// #smooth-wrapper {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   height: 100%;
-//   width: 100%;
-//   overflow: hidden;
-// }
-
-// #smooth-content {
-//   position: absolute;
-//   width: 100%;
-// }
